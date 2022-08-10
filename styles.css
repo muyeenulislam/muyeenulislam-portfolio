@@ -487,6 +487,9 @@ hr {
 .progress-line.php span {
   width: 85%;
 }
+.progress-line.laravel span {
+  width: 75%;
+}
 .progress-line.c span {
   width: 75%;
 }
