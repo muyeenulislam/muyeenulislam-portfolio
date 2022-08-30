@@ -482,6 +482,9 @@ hr {
   width: 90%;
 }
 .progress-line.js span {
+  width: 85%;
+}
+.progress-line.nodejs span {
   width: 80%;
 }
 .progress-line.php span {
