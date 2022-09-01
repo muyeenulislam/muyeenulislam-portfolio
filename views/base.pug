@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        // Essential META Tags
+        meta(property='og:title' content='Md. Muyeen - Ul - Islam')
+        meta(property='og:type' content='website')
+        meta(property='og:image' content='https://i.ibb.co/GTzs2M9/aboutimg.jpg')
+        meta(property='og:url' content='index.html')
+        meta(name='twitter:card' content='summary_large_image')
+        link(rel='shortcut icon' type='image/png' href='/img/2.png')
+        title Md. Muyeen - Ul - Islam
+        // styles
+        link(rel='stylesheet' href='./css/styles.css')
+        // fontawesome
+        link(rel='stylesheet' href='./fontawesome/css/all.min.css')
+        // lightslider
+        link(rel='stylesheet' href='./css/lightslider.css')
+        // jquery
+        script(src='https://code.jquery.com/jquery-3.6.0.js' integrity='sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=' crossorigin='anonymous')
+        // lightslider
+        script(defer='' type='text/javascript' src='./js/lightslider.js')
+
+
+    
+    body 
+        //- .preloader 
+        include _header
+        include _hero
+        include _about
+        include _resume
+        include _portfolio
+        include _contact
+        include _footer
+
+        script(src='/js/lightslider.js')
+        script(src='/js/main.js')

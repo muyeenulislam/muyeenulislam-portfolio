@@ -22,9 +22,21 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: 'admin',
+    default: 'user',
   },
+  passwordChangedAt: Date,
 });
+
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+  if (this.passwordChangedAt) {
+    const changedTimestamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10
+    );
+    return JWTTimestamp < changedTimestamp;
+  }
+  return false;
+};
 
 // model
 const User = mongoose.model('User', userSchema);

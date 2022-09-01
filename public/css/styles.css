@@ -8,7 +8,7 @@
 :root {
   --primaryColor: #011518;
   --secondaryColor: #063033;
-  --lighterPrimary: rgb(9, 88, 85);
+  --lighterPrimary: #095855;
   --mainBlack: #222;
   --lightestPrimary: #aefeff;
   --mainWhite: #fcfcfc;
@@ -145,13 +145,79 @@ a {
   max-width: 1170px;
 }
 
+/* light slider */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.wrapper {
+  position: relative;
+  /* background: #e7f0f7; */
+}
+.progressbar {
+  display: block;
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 200px;
+  height: 5px;
+}
+.progressbar::before,
+.progressbar::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: linear-gradient(90deg, #095855 0%, #aefeff 100%);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  -webkit-animation: movebar 5s linear infinite;
+  animation: movebar 5s linear infinite;
+}
+.progressbar::before {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.progressbar::after {
+  z-index: 9;
+  top: 6px;
+  filter: blur(16px);
+  opacity: 0.7;
+}
+
+@-webkit-keyframes movebar {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+@keyframes movebar {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+
 /********end of global styles*********/
 
 /********hero*********/
 .hero {
   min-height: calc(100vh - 62px);
   background: linear-gradient(rgba(1, 21, 24, 0.95), rgba(1, 21, 24, 0.7)),
-    url('./img/herobanner.jpg') center/cover no-repeat fixed;
+    url('img/herobanner.jpg') center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,7 +250,7 @@ a {
 @media screen and (min-width: 500px) {
   .hero {
     background: linear-gradient(rgba(1, 21, 24, 0.95), rgba(1, 21, 24, 0.7)),
-      url('./img/herobanner.jpg') center/cover no-repeat fixed;
+      url(/img/herobanner.jpg) center/cover no-repeat fixed;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -525,7 +591,7 @@ hr {
   background: var(--primaryColor);
   transition: var(--mainTransition);
   width: 325px;
-  height: 400px;
+  height: 450px;
 }
 .portfolio-card:hover {
   box-shadow: 0px 1px 30px -8px #ffffff;
@@ -561,11 +627,12 @@ hr {
 }
 .portfolio-link {
   text-align: center;
+  width: 80%;
+  margin: auto;
 }
 .project-link {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .cS-hidden {
@@ -580,6 +647,7 @@ hr {
 .input-group {
   width: 80vw;
   max-width: 800px;
+  padding-top: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -818,7 +886,7 @@ hr {
 
 /* pre loader */
 .preloader {
-  background: var(--primaryColor) url(./img/loader.gif) no-repeat center center;
+  background: var(--primaryColor) url(/img/loader.gif) no-repeat center center;
   background-size: 60px;
   height: 100vh;
   width: 100%;

@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const AppError = require('./utils/appError');
@@ -11,19 +12,41 @@ const hpp = require('hpp');
 
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
 // middleware
+// serve static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
 // set security http headers
 app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'", 'data:', 'blob:'],
+
+      fontSrc: ["'self'", 'https:', 'data:'],
+
+      scriptSrc: ["'self'", 'unsafe-inline'],
+
+      scriptSrc: ["'self'", 'https://*.cloudflare.com'],
+
+      scriptSrcElem: ["'self'", 'https:', 'https://*.cloudflare.com'],
+
+      styleSrc: ["'self'", 'https:', 'unsafe-inline'],
+
+      connectSrc: ["'self'", 'data', 'https://*.cloudflare.com'],
+    },
+  })
+);
 
 // body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
-
-// serve static files
-app.use(express.static(`${__dirname}/public`));
 
 // data sanitization agaisnt noSQL
 app.use(sanitize());
@@ -37,6 +60,9 @@ app.use(hpp());
 // routes
 
 // mount routers
+app.get('/', (req, res) => {
+  res.render('base');
+});
 app.use('/api/v1/projects', projectRouter);
 app.use('/api/v1/users', userRouter);
 

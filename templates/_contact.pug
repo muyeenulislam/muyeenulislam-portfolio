@@ -1,0 +1,16 @@
+section#contact.section.contact
+    // title
+    .title-wrapper
+        p.smaller-title get in touch with me
+        h2.title
+            span.subtitle contact
+    // progressbar
+    .wrapper
+        .progressbar
+    // end of title
+    form(action="https://formspree.io/f/mlezkezo", target="_blank", method="post")
+        .input-group
+            input.form-control(type="name", name="name", placeholder="Your Name")
+            input.form-control(type="email", name="email", placeholder="Your Email")
+            textarea.form-control(name="textarea", rows="5", placeholder="Leave a Message")
+            button.btn-primary.form-btn(type="submit") Submit

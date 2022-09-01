@@ -20,13 +20,16 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-mongo-sanitize": "^2.2.0",
+    "font-awesome": "^4.7.0",
     "helmet": "^6.0.0",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.4",
     "morgan": "^1.10.0",
+    "pug": "^3.0.2",
     "slugify": "^1.6.5",
     "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
