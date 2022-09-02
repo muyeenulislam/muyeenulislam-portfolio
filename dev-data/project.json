@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "image": "natours.jpg",
     "name": "Natours",
     "languages": "Languages used: HTML, CSS, Javascript, Pug, Node.js (Express, MongoDB, Mongoose)",

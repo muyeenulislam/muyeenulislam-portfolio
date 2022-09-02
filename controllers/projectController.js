@@ -3,6 +3,42 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const APIFeatures = require('../utils/apiFeatures');
 const factory = require('./handlerFactory');
+const multer = require('multer');
+const sharp = require('sharp');
+
+const multerStorage = multer.memoryStorage();
+
+// to verify if the file is image
+const multerFilter = (req, file, cb) => {
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    cb(new AppError('Not an image. Please upload only images', 400), false);
+  }
+};
+
+const upload = multer({
+  storage: multerStorage,
+  fileFilter: multerFilter,
+});
+
+// upload photo
+exports.uploadProjectPhoto = upload.fields([{ name: 'image', maxCount: 1 }]);
+
+// to resize photo
+exports.resizeProjectPhoto = catchAsync(async (req, res, next) => {
+  if (!req.files.image) return next();
+
+  req.body.image = `project-${Date.now()}.jpeg`;
+
+  await sharp(req.files.image[0].buffer)
+    .resize(733, 357)
+    .toFormat('jpeg')
+    .jpeg({ quality: 90 })
+    .toFile(`public/img/${req.body.image}`);
+
+  next();
+});
 
 // get all projects
 exports.getAllProjects = catchAsync(async (req, res, next) => {

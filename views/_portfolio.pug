@@ -12,130 +12,23 @@ section#portfolio.section.portfolio
     .section-center.portfolio-center
         // projects
         ul#autoWidth.cs-hidden
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/natours.jpg", alt="natours")
-                    // <p class="art-date">January 3rd, 2021</p>
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Natours
-                        // art info
-                        p Languages used: HTML, CSS, Javascript, Pug, Node.js (Express, MongoDB, Mongoose)
-                    .project-link
-                        a.btn-primary.btn-project(href="https://natours-muyeen.herokuapp.com/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/cms.jpg", alt="car management service")
-                    // <p class="art-date">January 3rd, 2021</p>
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Car Management Service
-                        // art info
-                        p Languages used: PHP, MySQL, HTML, CSS, Bootstrap.
-                    .project-link
-                        a.btn-primary.btn-project(href="http://car-management-service.rf.gd/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/forkify.jpg", alt="forkify")
-                    // <p class="art-date">January 3rd, 2021</p>
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title
-                            | Forkify
-                        // art info
-                        p Languages used: HTML5, CSS, Javascript.
-                    .project-link
-                        a.btn-primary.btn-project(href="https://forkify-muyeen.netlify.app/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/pg.png", alt="pig game")
-                    // </a>
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Pig Game
-                        // art info
-                        p Languages used: HTML5, CSS, Javascript.
-                    .project-link
-                        a.btn-primary.btn-project(href="https://muyeenulislam.github.io/Pig-Game/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/spw.jpg", alt="spw")
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Sakif&apos;s Pencil Work
-                        // art info
-                        p Languages used: HTML5, CSS, Javascript.
-                    .project-link
-                        a.btn-primary.btn-project(href="https://muyeenulislam.github.io/sakif-s-pencil-work/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/cnn.jpg", alt="cnn")
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Emotion Classification
-                        // art info
-                        p Languages used: Python, Jupyter Notebook
-                    .project-link
-                        a.btn-primary.btn-project(href="https://github.com/muyeenulislam/Emotion-Classification", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/treeland.jpg", alt="treeland")
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Treeland BD Ltd.
-                        // art info
-                        p Languages used: HTML, CSS, Javascript
-                    .project-link
-                        a.btn-primary.btn-project(href="http://treelandbd.rf.gd/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/activity.jpg", alt="activity-tracker")
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title Activity Tracker
-                        // art info
-                        p Languages used: HTML, CSS, Javascript
-                    .project-link
-                        a.btn-primary.btn-project(href="https://muyeenulislam.github.io/Activity-Tracker/", target="_blank") View Project
-                // end of single art
-            li.item
-                // single art
-                article.portfolio-card
-                    // img container
-                    img.portfolio-img(src="./img/gtn.png", alt="guess the number")
-                    // <p class="art-date">January 3rd, 2021</p>
-                    // art footer
-                    .portfolio-footer
-                        h4.portfolio-title
-                            | Guess The Number
-                        // art info
-                        p Languages used: HTML5, CSS, Javascript.
-                    .project-link
-                        a.btn-primary.btn-project(href="https://muyeenulislam.github.io/Guess-the-Number/", target="_blank") View Project
-                // end of single art
+            each project in projects 
+                li.item
+                    // single art
+                    article.portfolio-card
+                        // img container
+                        img.portfolio-img(src=`./img/${project.image}`, alt=`${project.name}`)
+                        // <p class="art-date">January 3rd, 2021</p>
+                        // art footer
+                        .portfolio-footer
+                            h4.portfolio-title= project.name
+                            // art info
+                            p= project.languages
+                        .project-link
+                            a.btn-primary.btn-project(href=`${project.website}`, target="_blank") View Project
+                    // end of single art
+            
+            
         // end of projects
     // end of portfolio-center
     // link to github

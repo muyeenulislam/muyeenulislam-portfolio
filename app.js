@@ -9,6 +9,7 @@ const userRouter = require('./routes/userRoutes');
 const sanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
@@ -60,9 +61,7 @@ app.use(hpp());
 // routes
 
 // mount routers
-app.get('/', (req, res) => {
-  res.render('base');
-});
+app.use('/', viewRouter);
 app.use('/api/v1/projects', projectRouter);
 app.use('/api/v1/users', userRouter);
 

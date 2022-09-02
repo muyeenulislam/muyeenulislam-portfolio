@@ -9,6 +9,8 @@ router
   .post(
     authController.protect,
     authController.restrictTo('admin'),
+    projectController.uploadProjectPhoto,
+    projectController.resizeProjectPhoto,
     projectController.createProject
   );
 
@@ -18,6 +20,8 @@ router
   .patch(
     authController.protect,
     authController.restrictTo('admin'),
+    projectController.uploadProjectPhoto,
+    projectController.resizeProjectPhoto,
     projectController.updateProject
   )
   .delete(
