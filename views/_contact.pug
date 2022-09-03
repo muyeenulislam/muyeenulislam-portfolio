@@ -1,16 +1,37 @@
 section#contact.section.contact
-    // title
-    .title-wrapper
-        p.smaller-title get in touch with me
-        h2.title
-            span.subtitle contact
-    // progressbar
-    .wrapper
-        .progressbar
-    // end of title
-    form(action="https://formspree.io/f/mlezkezo", target="_blank", method="post")
-        .input-group
-            input.form-control(type="name", name="name", placeholder="Your Name")
-            input.form-control(type="email", name="email", placeholder="Your Email")
-            textarea.form-control(name="textarea", rows="5", placeholder="Leave a Message")
-            button.btn-primary.form-btn(type="submit") Submit
+  // title
+  .title-wrapper
+    p.smaller-title get in touch with me
+    h2.title
+      span.subtitle contact
+  // progressbar
+  .wrapper
+    .progressbar
+  // end of title
+  h4.mini-title Send Me A Message
+  hr
+  form(action='https://formspree.io/f/mlezkezo' target='_blank' method='post')
+    .input-group
+      input.form-control(type='name' name='name' placeholder='Your Name')
+      input.form-control(type='email' name='email' placeholder='Your Email')
+      textarea.form-control(name='textarea' rows='5' placeholder='Leave a Message')
+      button.btn-primary.form-btn(type='submit') Submit
+  h4.mini-title Reach Me Out
+  hr
+  .contact-info
+    .extended-info
+      h4
+        i.fa-solid.fa-location-dot
+        |  Address
+      p.contact-paragraph
+        | House - C-2 &amp; C-4, Road No. - 18, Block - C, Banasree, Rampura, Dhaka, Bangladesh
+    .extended-info
+      h4
+        i.fa-solid.fa-phone
+        |  Call Me
+      p.contact-paragraph +8801521252380
+    .extended-info
+      h4
+        i.fa-solid.fa-envelope
+        |  Email Me
+      p.contact-paragraph mdmuyeenulislam@gmail.com

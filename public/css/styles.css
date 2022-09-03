@@ -450,7 +450,7 @@ a {
   padding: 5rem 5rem 5rem 5rem;
   border-radius: 20px;
 }
-hr {
+.education-container hr {
   height: 2px;
   background-color: var(--lightestPrimary);
   border: none;
@@ -694,6 +694,75 @@ hr {
 .form-btn {
   font-family: 'Poppins', sans-serif;
 }
+
+.contact-info {
+  width: 80vw;
+  max-width: 900px;
+  padding: 20px 20px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  border-radius: 15px;
+  /* background-color: var(--secondaryColor); */
+
+  justify-content: space-around;
+}
+.contact-info h1 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.contact-info {
+  color: var(--lightestPrimary);
+}
+.extended-info {
+  max-width: 250px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid;
+  border-color: var(--lightestPrimary);
+  border-radius: 15px;
+  padding: 20px 20px;
+}
+.contact-paragraph {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.mini-title {
+  text-align: center;
+  padding-top: 50px;
+  color: var(--lightestPrimary);
+}
+.contact hr {
+  width: 250px;
+  margin: auto;
+  height: 2px;
+  background-color: var(--lightestPrimary);
+  border: none;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-info {
+    width: 80vw;
+    padding: 20px 20px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    /* background-color: var(--secondaryColor) ; */
+    align-items: center;
+  }
+  .extended-info {
+    width: inherit;
+    max-width: -webkit-fill-available;
+    text-align: center;
+    border: 1px solid;
+    border-color: var(--lightestPrimary);
+    border-radius: 15px;
+    padding: 20px 20px;
+    margin: 10px 0;
+  }
+}
+
 /********end of contact*********/
 
 /********footer*********/
