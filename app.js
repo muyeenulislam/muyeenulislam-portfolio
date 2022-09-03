@@ -10,6 +10,7 @@ const sanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const viewRouter = require('./routes/viewRoutes');
+const compression = require('compression');
 
 const app = express();
 
@@ -58,8 +59,10 @@ app.use(xss());
 // prevent parameter pollution
 app.use(hpp());
 
-// routes
+// compression
+app.use(compression());
 
+// routes
 // mount routers
 app.use('/', viewRouter);
 app.use('/api/v1/projects', projectRouter);
