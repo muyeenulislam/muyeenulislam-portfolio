@@ -11,13 +11,21 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const viewRouter = require('./routes/viewRoutes');
 const compression = require('compression');
+const cors = require('cors');
 
 const app = express();
+
+app.enable('trust proxy');
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // middleware
+
+// cors
+app.use(cors());
+app.options('*', cors());
+
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
