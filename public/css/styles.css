@@ -432,6 +432,17 @@ a {
   font-size: 25px;
 }
 
+@media screen and (max-width: 600px) {
+  .operations__tab-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .operations__tab {
+    margin: 20px auto 0 auto;
+  }
+}
+
 /* education */
 .education {
   font-size: 20px;
@@ -573,6 +584,70 @@ a {
 }
 .progress-line.word span {
   width: 85%;
+}
+
+/* training */
+.training {
+  font-size: 20px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+.training-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  line-height: 2rem;
+}
+
+.training-desc a {
+  color: var(--lightestPrimary);
+}
+
+.training-desc i {
+  font-size: 20px;
+  color: var(--lightestPrimary);
+  margin-right: 7px;
+}
+
+.training-container {
+  background-color: var(--secondaryColor);
+  padding: 5rem 5rem 5rem 5rem;
+  border-radius: 20px;
+}
+.training-container hr {
+  height: 2px;
+  background-color: var(--lightestPrimary);
+  border: none;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 750px) {
+  .operations__content {
+    /* JUST PRESENTATIONAL */
+    font-size: 1.7rem;
+    padding: 2.5rem 4rem 6.5rem 4rem;
+    justify-content: center;
+  }
+  .training-container {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+@media screen and (max-width: 892px) {
+  .operations__icon {
+    display: none;
+  }
+  .operations__content p {
+    grid-column: 1;
+  }
+  .training-container {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .training-container {
+    padding: 2rem 2rem 2rem 2rem;
+  }
 }
 /********end of resume*********/
 

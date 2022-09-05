@@ -1,116 +1,169 @@
 section#resume.section.resume
-    // title
-    .title-wrapper
-        p.smaller-title Check out my resume
-        h2.title
-            span.subtitle Resume
-    // progressbar
-    .wrapper
-        .progressbar
-    // end of title
-    .operations
-        // tabs
-        div(class="operations__tab-container")
-            button(class="btn operations__tab operations__tab--active", data-tab="1")
-                | Education
-            button(class="btn operations__tab", data-tab="2")
-                | Skills
-        // education tab
-        div(class="operations__content operations__content--1 operations__content--active")
-            div
-                h5(class="operations__header")
-                    span.subtitle
-                        i.fa-solid.fa-graduation-cap.operation-icon
-                        | Education
-            .education-container
-                p.education
-                    i.fa-solid.fa-angles-right
-                    | East West University, Dhaka, Bangladesh - B.Sc.
-                    p.education-desc January, 2018 - May, 2022 
-                        br
-                        | I have completed my B.Sc. degree in Computer Science and Engineering securing CGPA 3.42 on a scale of 4.
-                hr
-                p.education
-                    i.fa-solid.fa-angles-right
-                    | Birshrestha Munshi Abdur Rouf Public College, Dhaka, Bangladesh - H.S.C
-                    p.education-desc 2015-2017 
-                        br
-                        | I have completed my H.S.C. degree in Science from Dhaka board securing GPA 4.92 on a scale of 5.
-                hr
-                p.education
-                    i.fa-solid.fa-angles-right
-                    | Motijheel Govt. Boys&apos; High School, Dhaka, Bangladesh - S.S.C
-                    p.education-desc 2013-2015 
-                        br
-                        | I have completed my S.S.C. degree in Science from Dhaka board securing GPA 5 on a scale of 5.
-        // skills tab
-        div(class="operations__content operations__content--2")
-            div
-                h5(class="operations__header")
-                    span.subtitle
-                        i.fa-solid.fa-brain
-                        | Skills
-                .skills-container
-                    .skills-bar
-                        .skill-name
-                            i.fa-brands.fa-html5.skills-icon
-                            | HTML /
-                            i.fa-brands.fa-css3.skills-icon
-                            | CSS
-                        .progress-line.html
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fa-brands.fa-js-square.skills-icon
-                            | Javascript
-                        .progress-line.js
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fa-brands.fa-node-js.skills-icon
-                            | Node.js (Express, MongoDB, Mongoose)
-                        .progress-line.nodejs
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fa-brands.fa-php.skills-icon
-                            | PHP/MySQL
-                        .progress-line.php
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fab.fa-laravel
-                            | Laravel
-                        .progress-line.laravel
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fa-solid.fa-c.skills-icon
-                            | C / C++
-                        .progress-line.c
-                            span
-                    .skills-bar
-                        .skill-name
-                            i.fa-brands.fa-python.skills-icon
-                            | Python
-                        .progress-line.python
-                            span
-                    .skills-bar
-                        .skill-name
-                            span.skills-logo Ps
-                            | Adobe Photoshop
-                        .progress-line.ps
-                            span
-                    .skills-bar
-                        .skill-name
-                            span.skills-logo Ai
-                            | Adobe Illustrator
-                        .progress-line.ai
-                            span
-                    .skills-bar
-                        .skill-name
-                            span.skills-logo W
-                            | MS Word
-                        .progress-line.word
-                            span
-                // end of skills tab
+  // title
+  .title-wrapper
+    p.smaller-title Check out my resume
+    h2.title
+      span.subtitle Resume
+  // progressbar
+  .wrapper
+    .progressbar
+  // end of title
+  .operations
+    // tabs
+    .operations__tab-container
+      button.btn.operations__tab.operations__tab--active(data-tab='1')
+        | Education
+      button.btn.operations__tab(data-tab='2')
+        | Skills
+      button.btn.operations__tab(data-tab='3')
+        | Training
+    // education tab
+    .operations__content.operations__content--1.operations__content--active
+      div
+        h5.operations__header
+          span.subtitle
+            i.fa-solid.fa-graduation-cap.operation-icon
+            | Education
+      .education-container
+        p.education
+          i.fa-solid.fa-angles-right
+          |  East West University, Dhaka, Bangladesh - B.Sc.
+        p.education-desc
+          | January, 2018 - May, 2022 
+          br
+          |                 I have completed my B.Sc. degree in Computer Science and Engineering securing CGPA 3.42 on a scale of 4.
+        p
+        hr
+        p.education
+          i.fa-solid.fa-angles-right
+          |   Birshrestha Munshi Abdur Rouf Public College, Dhaka, Bangladesh - H.S.C
+        p.education-desc
+          | 2015-2017 
+          br
+          |               I have completed my H.S.C. degree in Science from Dhaka board securing GPA 4.92 on a scale of 5.
+        p
+        hr
+        p.education
+          i.fa-solid.fa-angles-right
+          |   Motijheel Govt. Boys&apos; High School, Dhaka, Bangladesh - S.S.C
+        p.education-desc
+          | 2013-2015 
+          br
+          |               I have completed my S.S.C. degree in Science from Dhaka board securing GPA 5 on a scale of 5.
+        p
+    // skills tab
+    .operations__content.operations__content--2
+      div
+        h5.operations__header
+          span.subtitle
+            i.fa-solid.fa-brain
+            | Skills
+      .skills-container
+        .skills-bar
+          .skill-name
+            i.fa-brands.fa-html5.skills-icon
+            | HTML / 
+            i.fa-brands.fa-css3.skills-icon
+            | CSS
+          .progress-line.html
+            span
+        .skills-bar
+          .skill-name
+            i.fa-brands.fa-js-square.skills-icon
+            | Javascript
+          .progress-line.js
+            span
+        .skills-bar
+          .skill-name
+            i.fa-brands.fa-node-js.skills-icon
+            | Node.js (Express, MongoDB, Mongoose)
+          .progress-line.nodejs
+            span
+        .skills-bar
+          .skill-name
+            i.fa-brands.fa-php.skills-icon
+            | PHP/MySQL
+          .progress-line.php
+            span
+        .skills-bar
+          .skill-name
+            i.fab.fa-laravel
+            |  Laravel
+          .progress-line.laravel
+            span
+        .skills-bar
+          .skill-name
+            i.fa-solid.fa-c.skills-icon
+            | C / C++
+          .progress-line.c
+            span
+        .skills-bar
+          .skill-name
+            i.fa-brands.fa-python.skills-icon
+            | Python
+          .progress-line.python
+            span
+        .skills-bar
+          .skill-name
+            span.skills-logo Ps
+            | Adobe Photoshop
+          .progress-line.ps
+            span
+        .skills-bar
+          .skill-name
+            span.skills-logo Ai
+            | Adobe Illustrator
+          .progress-line.ai
+            span
+        .skills-bar
+          .skill-name
+            span.skills-logo W
+            | MS Word
+          .progress-line.word
+            span
+    // end of skills tab
+    // training tab
+    .operations__content.operations__content--3
+      div
+        h5.operations__header
+          span.subtitle
+            i.fa-solid.fa-database
+            |  Training and Develpoment
+      .training-container
+        p.training
+          i.fa-solid.fa-angles-right
+          |  Wadhwani Opportunity&apos;s 21st
+          |                 Century Core Employability Skills
+          |                 Program
+        p.training-desc
+          i.fa-solid.fa-download
+          a(href='https://drive.google.com/file/d/1q1xGki3W0ei2MRNlHDQHtc8oITNAzmIA/view' target='_blank') Certificate of completion
+        p
+        hr
+        p.training
+          i.fa-solid.fa-angles-right
+          |  Foundations of User Experience (UX)
+          |                 Design
+        p.training-desc
+          i.fa-solid.fa-download
+          a(href='https://drive.google.com/file/d/14LbWArhGXBW6p_iKYpaypWvZ-Ha0YePR/view' target='_blank') Certificate of completion
+        p
+        hr
+        p.training
+          i.fa-solid.fa-angles-right
+          |   The Complete JavaScript Course
+          |                 2022: From Zero to Expert!
+        p.training-desc
+          i.fa-solid.fa-download
+          a(href='https://drive.google.com/file/d/1sY6GWMy5kmi8zDT_o-V_DX426Te_6urj/view' target='_blank') Certificate of completion
+        p
+        hr
+        p.training
+          i.fa-solid.fa-angles-right
+          |  Web Application Development using
+          |                 PHP and Laravel
+        p.training-desc
+          i.fa-solid.fa-download
+          a(href='#') bdskills.gov.bd
+        p
+    // end of training tab
