@@ -1,3 +1,4 @@
+// contact
 section#contact.section.contact
   // title
   .title-wrapper
@@ -10,11 +11,11 @@ section#contact.section.contact
   // end of title
   h4.mini-title Send Me A Message
   hr
-  form(action='https://formspree.io/f/mvoyzkbq' target='_blank' method='post')
+  form.form-group
     .input-group
-      input.form-control(type='name' name='name' placeholder='Your Name')
-      input.form-control(type='email' name='email' placeholder='Your Email')
-      textarea.form-control(name='textarea' rows='5' placeholder='Leave a Message')
+      input#name.form-control(type='name' name='name' placeholder='Your Name')
+      input#email.form-control(type='email' name='email' placeholder='Your Email')
+      textarea#textarea.form-control(name='textarea' rows='5' placeholder='Leave a Message')
       button.btn-primary.form-btn(type='submit') Submit
   h4.mini-title Reach Me Out
   hr

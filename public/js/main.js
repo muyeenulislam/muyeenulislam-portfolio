@@ -128,13 +128,6 @@ $(document).ready(function () {
   });
 });
 
-//clear input in form
-// const btnClear = document.querySelector('.form-btn');
-// const inputField = document.querySelectorAll('.form-control');
-// btnClear.addEventListener('click', () => {
-//   inputField.forEach(i => (i.value = ''));
-// });
-
 //nav highlighter
 const navLinks = document.querySelectorAll('.nav-link');
 const sectionAll = document.querySelectorAll('section');
