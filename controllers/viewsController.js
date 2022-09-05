@@ -25,7 +25,7 @@ exports.sendMail = catchAsync(async (req, res, next) => {
   const mailOptions = {
     from: req.body.email,
     to: 'mdmuyeenulislam@gmail.com',
-    subject: `Message from ${req.body.name}`,
+    subject: `Message from ${req.body.email}, ${req.body.name}`,
     text: req.body.textarea,
   };
 
