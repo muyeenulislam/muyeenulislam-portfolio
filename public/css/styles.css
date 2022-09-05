@@ -562,13 +562,10 @@ a {
   width: 85%;
 }
 .progress-line.nodejs span {
-  width: 80%;
+  width: 85%;
 }
 .progress-line.php span {
   width: 85%;
-}
-.progress-line.laravel span {
-  width: 75%;
 }
 .progress-line.c span {
   width: 75%;
@@ -907,6 +904,7 @@ a {
   color: var(--lightestPrimary);
 }
 .nav-link {
+  font-family: 'Josefin Sans', sans-serif;
   display: block;
   padding: 1rem 2rem;
   color: var(--mainWhite);
