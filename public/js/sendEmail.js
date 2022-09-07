@@ -9,7 +9,6 @@ export const sendEmail = async data => {
       url,
       data,
     });
-    // console.log(res);
     if (res.data.status === 'success') {
       showAlert('success', 'Message sent successfully');
     }
