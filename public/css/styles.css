@@ -250,7 +250,7 @@ a {
 @media screen and (min-width: 500px) {
   .hero {
     background: linear-gradient(rgba(1, 21, 24, 0.95), rgba(1, 21, 24, 0.7)),
-      url(/img/herobanner.jpg) center/cover no-repeat fixed;
+      url(/img/herobanner2.jpg) center/cover no-repeat fixed;
   }
   .hero-title {
     font-size: 2.5rem;
