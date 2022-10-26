@@ -217,7 +217,7 @@ a {
 .hero {
   min-height: calc(100vh - 62px);
   background: linear-gradient(rgba(1, 21, 24, 0.95), rgba(1, 21, 24, 0.7)),
-    url('/img/herobanner.jpg') center/cover no-repeat fixed;
+    url('/img/herobanner2.jpg') center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
