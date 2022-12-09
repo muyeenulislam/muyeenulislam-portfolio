@@ -7,6 +7,7 @@ const dotenv = require('dotenv').config({
   path: path.resolve(__dirname, './config.env'),
 });
 
+// define database
 const DB = process.env.DATABASE;
 
 mongoose.connect(DB).then(() => console.log('successful'));
