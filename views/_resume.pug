@@ -16,6 +16,8 @@ section#resume.section.resume
       button.btn.operations__tab(data-tab='2')
         | Skills
       button.btn.operations__tab(data-tab='3')
+        | Experience
+      button.btn.operations__tab(data-tab='4')
         | Training
     // education tab
     .operations__content.operations__content--1.operations__content--active
@@ -81,21 +83,15 @@ section#resume.section.resume
             span
         .skills-bar
           .skill-name
-            i.fa-brands.fa-php.skills-icon
-            | PHP/MySQL
+            i.fa-brands.fa-react.skills-icon
+            | React.js / Next.js
           .progress-line.php
             span
         .skills-bar
           .skill-name
-            i.fa-solid.fa-c.skills-icon
-            | C / C++
+            i.fa-brands.fa-github.skills-icon
+            | Git/Github
           .progress-line.c
-            span
-        .skills-bar
-          .skill-name
-            i.fa-brands.fa-python.skills-icon
-            | Python
-          .progress-line.python
             span
         .skills-bar
           .skill-name
@@ -116,8 +112,34 @@ section#resume.section.resume
           .progress-line.word
             span
     // end of skills tab
-    // training tab
+    // experience tab
     .operations__content.operations__content--3
+      div
+        h5.operations__header
+          span.subtitle
+            i.fa-solid.fa-briefcase
+            |  Experience
+      .experience-container
+        p.experience
+          i.fa-solid.fa-angles-right
+          |  EZ Wage
+        p.experience-desc
+          | September, 2022 - Present (Full Time)
+          br
+          |                 Full Stack Developer
+        p
+        hr
+        p.experience
+          i.fa-solid.fa-angles-right
+          |   Univision
+        p.experience-desc
+          | March, 2023 - Present (Contractual) 
+          br
+          |               Full Stack Developer
+        p
+    // end of experience tab
+    // training tab
+    .operations__content.operations__content--4
       div
         h5.operations__header
           span.subtitle
